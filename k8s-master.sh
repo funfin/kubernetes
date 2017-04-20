@@ -9,4 +9,8 @@ pip install envtpl
 echo 0 > /sys/fs/selinux/enforce
 
 
+envtpl -o /etc/sysconfig/flanneld master/flanneld.tpl
+envtpl -o /etc/kubernetes/apiserver master/apiserver.tpl
+envtpl -o /etc/kubernetes/config master/config.tpl
+envtpl -o /etc/kubernetes/controller-manager master/controller-manager.tpl
 
